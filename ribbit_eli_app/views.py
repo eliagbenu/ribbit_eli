@@ -46,3 +46,18 @@ def login_view(request):
 def logout_view(request):
 	logout(request)
 	return redirect('/')
+
+
+def signup(request):
+	user_form = UserCreateForm(data=request.POST)
+	if request.method =='POST':
+		if user_form.is_valid():
+			username=user_form.clean_username()
+			password = user_form.clean_password2()
+			user_form.save()
+			user = authenticate(username=username,password=password)
+			login(request,user)
+			return redirect('/')
+		else:
+			return index(request,user_form=user_form)
+	return redirect('/')

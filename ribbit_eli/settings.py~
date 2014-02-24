@@ -45,8 +45,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'south',
-	'ribbit_eli_app',
 )
 
 MIDDLEWARE_CLASSES = (

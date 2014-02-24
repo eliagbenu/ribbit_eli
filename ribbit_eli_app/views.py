@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
-from ribbit_app.forms import AuthenticateForm, UserCreateForm, RibbitForm
+from ribbit_eli_app.forms import AuthenticateForm, UserCreateForm, RibbitForm
 
 # Create your views here.
 
